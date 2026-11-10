@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Launcher icon background: the same neumorphic base the app draws its surfaces on. -->
+    <color name="ic_launcher_background">#E9EEF4</color>
+
+    <!-- Window background painted before Compose draws its first frame (see values-night/themes.xml). -->
+    <color name="window_background">#E9EEF4</color>
+
+    <!-- Widget text; the dark values live in values-night/colors.xml so the widget follows the
+         same theme split as the Compose UI. -->
+    <color name="widget_text_primary">#2A3442</color>
+    <color name="widget_text_on_accent">#FFFFFF</color>
+</resources>

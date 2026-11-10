@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+      Window theme only. Every pixel of UI is drawn by Compose, so this exists to (a) paint the
+      correct base colour in the frame between process start and the first Compose frame, instead of
+      flashing white, and (b) hand the system bars to enableEdgeToEdge().
+    -->
+    <style name="Theme.CoolMax" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@color/window_background</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+</resources>

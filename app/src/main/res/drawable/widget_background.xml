@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Widget card in the light theme: the same base surface the Compose UI uses. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="20dp" />
+    <solid android:color="#E9EEF4" />
+    <stroke
+        android:width="1dp"
+        android:color="#D5DEE9" />
+</shape>

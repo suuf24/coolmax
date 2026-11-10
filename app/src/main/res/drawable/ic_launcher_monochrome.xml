@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Themed-icon layer (Android 13+). The system tints this with the wallpaper palette, so it is one
+  flat silhouette rather than the two-tone mark.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <path
+        android:pathData="M45,28 L45,37 M54,28 L54,37 M63,28 L63,37 M45,71 L45,80 M54,71 L54,80 M63,71 L63,80 M28,45 L37,45 M28,54 L37,54 M28,63 L37,63 M71,45 L80,45 M71,54 L80,54 M71,63 L80,63"
+        android:strokeColor="#000000"
+        android:strokeLineCap="round"
+        android:strokeWidth="4.5" />
+
+    <path
+        android:pathData="M45,37 L63,37 A8,8 0 0 1 71,45 L71,63 A8,8 0 0 1 63,71 L45,71 A8,8 0 0 1 37,63 L37,45 A8,8 0 0 1 45,37 Z"
+        android:strokeColor="#000000"
+        android:strokeWidth="4.5" />
+
+    <path
+        android:fillColor="#000000"
+        android:pathData="M50,47 L58,47 A3.5,3.5 0 0 1 61.5,50.5 L61.5,57.5 A3.5,3.5 0 0 1 58,61 L50,61 A3.5,3.5 0 0 1 46.5,57.5 L46.5,50.5 A3.5,3.5 0 0 1 50,47 Z" />
+</vector>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CoolMax</string>
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_cpu_control">CPU Control</string>
+    <string name="nav_screen_off">Screen-Off</string>
+
+    <string name="badge_dry_run_active">SIMULATION (DRY-RUN) MODE ACTIVE</string>
+    <string name="btn_reset_system_default">Reset System Default</string>
+    <string name="btn_dismiss">Dismiss</string>
+    <string name="app_loading">Loading CPU data…</string>
+
+    <!-- Root Required Screen -->
+    <string name="root_required_title">Root Access Required</string>
+    <string name="root_required_explanation">CoolMax requires root access (Magisk, KernelSU, or APatch via libsu) to read and write cpufreq sysfs nodes under /sys/devices/system/cpu/. Please grant superuser permission and try again.</string>
+    <string name="btn_retry_root">Retry Root Detection</string>
+    <string name="btn_try_dry_run_mode">Enter Simulation (Dry-Run) Mode</string>
+
+    <!-- 15s Confirmation Dialog -->
+    <string name="confirm_keep_title">Confirm Frequency Changes</string>
+    <string name="confirm_keep_body">Profile "%1$s" has been applied and verified. Tap "Keep Changes" within %2$d seconds or settings will automatically revert for safety.</string>
+    <string name="btn_keep_changes">Keep Changes (%1$ds)</string>
+    <string name="btn_revert_now">Revert Now</string>
+
+    <!-- Dashboard -->
+    <string name="safe_mode_banner_title">SAFE MODE ACTIVE</string>
+    <string name="safe_mode_banner_default_reason">An interrupted profile apply or unexpected reboot was detected. All auto-apply triggers have been disabled and initial kernel snapshot restored to prevent a bootloop.</string>
+    <string name="btn_acknowledge_safe_mode">Acknowledge &amp; Clear Safe Mode</string>
+    <string name="dashboard_thermal_title">CPU / SoC Temperature</string>
+    <string name="dashboard_thermal_unavailable">/sys/class/thermal sensors unavailable</string>
+    <string name="cluster_cores_online_format">Online Cores: %1$s (Total: %2$s)</string>
+    <string name="realtime_chart_title">Real-Time Frequency &amp; Thermal Chart (While Visible)</string>
+    <string name="time_in_state_title">Time-in-State Distribution</string>
+    <string name="dashboard_empty_clusters_title">No CPU cluster detected</string>
+    <string name="dashboard_empty_clusters_desc">CoolMax could not read a single cpufreq node. Make sure root access is active, then reload the app.</string>
+
+    <string name="device_info_title">Device &amp; Kernel Info</string>
+    <string name="device_info_soc">SoC / Platform</string>
+    <string name="device_info_clusters">Clusters &amp; Cores</string>
+    <string name="device_info_governors">Available Governors</string>
+    <string name="device_info_kernel">Kernel Version</string>
+    <string name="device_info_root">Root Status</string>
+    <string name="device_info_selinux">SELinux Status</string>
+    <string name="pref_dry_run_title">Simulation Mode (Dry-Run)</string>
+    <string name="pref_dry_run_desc">Log sysfs commands that would run without writing to the kernel</string>
+
+    <string name="event_history_title">Event History &amp; Logs</string>
+    <string name="event_history_empty">No profile application events recorded yet.</string>
+    <string name="btn_export_logs">Export Logs</string>
+
+    <!-- CPU Control -->
+    <string name="label_scaling_min_freq">Minimum Frequency (scaling_min_freq)</string>
+    <string name="label_scaling_max_freq">Maximum Frequency (scaling_max_freq)</string>
+    <string name="label_scaling_governor">Active Governor (scaling_governor)</string>
+    <string name="warning_max_below_50_percent">Warning: Setting maximum frequency below 50 percent of the cluster hardware ceiling may reduce system responsiveness.</string>
+    <string name="btn_apply_manual_15s">Apply (15s Auto-Revert Confirmation)</string>
+    <string name="btn_undo_last_apply">Undo Last Change</string>
+    <string name="label_save_as_profile_name">New Profile Name</string>
+    <string name="btn_save_current_as_profile">Save Current as Profile</string>
+
+    <!-- Screen-Off & Triggers -->
+    <string name="screen_off_toggle_title">Enable Profile When Screen Is Off</string>
+    <string name="screen_off_toggle_desc">Apply power-saving frequencies when the screen turns off and automatically restore when the screen turns on</string>
+    <string name="screen_off_preset_label">Screen-Off Preset</string>
+    <string name="preset_battery_saver">Battery Saver</string>
+    <string name="preset_balanced">Balanced</string>
+    <string name="preset_custom">Custom</string>
+    <string name="screen_off_delay_format">Delay before applying: %1$d seconds</string>
+    <string name="screen_off_skip_charging">Skip when device is charging</string>
+    <string name="screen_off_skip_media">Skip when media/audio is playing</string>
+    <string name="screen_off_network_2g_title">2G-Only Network While Screen Is Off</string>
+    <string name="screen_off_network_2g_desc">When the screen turns off, the network mode drops to 2G (GSM only) and returns to the default mode when the screen turns on. Cellular signal drops briefly.</string>
+    <string name="screen_off_freeze_title">Freeze Apps While Screen Is Off</string>
+    <string name="screen_off_freeze_desc">Other apps are paused (frozen) so they cannot run in the background. Whitelisted apps keep running normally.</string>
+    <string name="screen_off_freeze_whitelist_count">Whitelist: %1$d apps</string>
+    <string name="screen_off_freeze_manage">Manage App Whitelist</string>
+    <string name="screen_off_freeze_dialog_title">Choose Whitelist Apps</string>
+    <string name="screen_off_freeze_dialog_desc">Selected apps are never frozen while the screen is off (for example a music player, messaging app or VPN).</string>
+    <string name="screen_off_freeze_empty">No matching app.</string>
+    <string name="screen_off_cores_title">Screen-Off Core Online State: %1$s</string>
+
+    <string name="triggers_section_title">Automatic Triggers &amp; Thermal Guard</string>
+    <string name="triggers_priority_order_desc">Priority: Safe Mode &gt; High Temp &gt; Manual &gt; Per-App &gt; Screen-Off &gt; Low Battery &gt; Schedule</string>
+    <string name="trigger_low_battery_label">Auto Battery Saver when Battery &lt;= %1$d%%</string>
+    <string name="trigger_schedule_label">Night Schedule (%1$02d:00 – %2$02d:00)</string>
+    <string name="trigger_per_app_label">Per-App Profiles (via official UsageStats)</string>
+    <string name="btn_grant_usage_stats">Open Usage Access Permission Settings</string>
+    <string name="btn_ignore_battery_optimizations">Request Battery Optimization Exemption (Doze)</string>
+    <string name="screen_on_restore_label">When the Screen Turns Back On</string>
+    <string name="restore_mode_snapshot">Restore Snapshot From Before Screen-Off</string>
+    <string name="restore_mode_screen_on_config">Always Apply Screen-On Configuration</string>
+
+    <!-- Profile Management -->
+    <string name="profiles_management_title">Profile Manager &amp; JSON Export/Import</string>
+    <string name="profiles_empty_desc">No saved profiles yet. Save one from the CPU Control tab or import JSON below.</string>
+    <string name="btn_profile_apply">Apply</string>
+    <string name="btn_profile_duplicate">Duplicate</string>
+    <string name="btn_profile_export">Export JSON</string>
+    <string name="btn_profile_delete">Delete</string>
+    <string name="label_import_profile_json">Paste Profile JSON to Import</string>
+    <string name="btn_import_profile_json">Validate &amp; Import JSON</string>
+
+    <!-- Notifications, Tile & Widget -->
+    <string name="notif_channel_guard_name">Screen-Off Profile Guard Service</string>
+    <string name="notif_channel_guard_desc">Persistent notification while monitoring screen state</string>
+    <string name="notif_channel_alert_name">CPU Thermal &amp; Safety Alerts</string>
+    <string name="notif_channel_alert_desc">High-priority alerts when CPU temperature exceeds safe threshold</string>
+    <string name="notif_status_monitoring">Monitoring screen state &amp; CPU temperature</string>
+    <string name="notif_status_screen_off_active">Screen-Off Profile active (%1$s)</string>
+    <string name="notif_status_skipped_charging">Screen-Off skipped (charging)</string>
+    <string name="notif_status_skipped_media">Screen-Off skipped (media playing)</string>
+    <string name="notif_status_paused_1h">Paused for 1 hour (System defaults restored)</string>
+    <string name="notif_status_reset_done">Restored system default frequencies</string>
+    <string name="notif_status_apply_error">Some values were overridden by thermal/vendor HAL</string>
+    <string name="notif_action_pause_1h">Pause 1h</string>
+    <string name="notif_action_reset">Reset Default</string>
+
+    <string name="tile_screen_off_label">CoolMax Screen-Off</string>
+    <string name="widget_name">CoolMax Profile Widget</string>
+    <string name="widget_status_on">Screen-Off: ON (%1$s)</string>
+    <string name="widget_status_off">Screen-Off: OFF</string>
+    <string name="widget_btn_toggle_label">On/Off</string>
+    <string name="widget_btn_preset_label">Cycle Preset</string>
+    <string name="dry_run_confirm_title">Dry-Run Mode Active</string>
+    <string name="dry_run_confirm_body">Dry-Run only simulates commands: no CPU value is actually changed. Turn Dry-Run off on the Dashboard to apply for real.</string>
+    <string name="dry_run_confirm_continue">Simulate Only</string>
+    <string name="dry_run_confirm_cancel">Cancel</string>
+
+    <!-- Per-App Governor & Governor Dropdown -->
+    <string name="nav_per_app">Per-App</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_save">Save</string>
+    <string name="governor_dropdown_label_short">Governor</string>
+    <string name="governor_active_format">Active in kernel: %1$s</string>
+    <string name="governor_none_available">Kernel exposes no governor</string>
+
+    <!-- Custom Thermal Limit -->
+    <string name="thermal_guard_title">Custom Thermal Limit</string>
+    <string name="thermal_guard_desc">Step the maximum frequency down when the temperature exceeds your limit, and restore it automatically once cooled</string>
+    <string name="thermal_limit_label_format">Temperature limit: %1$.0f °C</string>
+    <string name="thermal_input_label">Manual value (°C)</string>
+    <string name="thermal_status_normal">Normal</string>
+    <string name="thermal_status_throttling">Throttling</string>
+    <string name="thermal_sensor_unavailable">Thermal sensor unavailable</string>
+    <string name="thermal_high_risk_warning">Warning: a limit of 85 °C or higher is risky. The device may force-throttle or overheat. Use 70–80 °C for daily use.</string>
+    <string name="thermal_guard_note">This limit caps scaling_max_freq above every other profile (screen-off, per-app, manual). A 4 °C hysteresis prevents frequency flapping.</string>
+
+    <!-- Per-App Governor Screen -->
+    <string name="perapp_master_title">Per-App Governor</string>
+    <string name="perapp_master_desc">Apply a governor while a chosen app is in the foreground; the global governor is restored when you leave it</string>
+    <string name="perapp_priority_note">Priority: Screen-Off Profile &gt; Per-App Governor &gt; Global Governor. The thermal limit still caps frequencies above all of them.</string>
+    <string name="perapp_usage_permission_missing">Usage Access permission is not granted, so the foreground app cannot be detected. Grant it to make per-app rules work.</string>
+    <string name="perapp_add_app">Add App</string>
+    <string name="perapp_selected_title">Selected Apps</string>
+    <string name="perapp_restore_all">Restore All</string>
+    <string name="perapp_empty">No apps yet. Add an app to configure its governor.</string>
+    <string name="perapp_edit">Edit</string>
+    <string name="perapp_restore">Restore</string>
+    <string name="perapp_governor_unavailable_warning">Governor %1$s is not available in this kernel, so the rule will not be applied.</string>
+    <string name="perapp_picker_title">Choose App</string>
+    <string name="perapp_search_hint">Search apps…</string>
+    <string name="perapp_show_system">Show system apps</string>
+    <string name="perapp_loading">Loading apps…</string>
+    <string name="perapp_no_result">No matching apps.</string>
+    <string name="perapp_governor_for_app">Governor for %1$s</string>
+    <string name="perapp_governor_label">App governor</string>
+    <string name="perapp_restore_all_confirm_title">Restore all apps?</string>
+    <string name="perapp_restore_all_confirm_body">Every per-app rule will be removed and the global governor will apply to all apps.</string>
+    <string name="notif_status_thermal_throttling">Thermal throttling active (%1$.1f °C, limit %2$.1f °C)</string>
+    <string name="notif_status_thermal_normal">Temperature normal, throttle released</string>
+    <string name="notif_status_per_app_governor">Per-app: governor %1$s for %2$s</string>
+    <string name="notif_status_per_app_failed">Per-app rule failed to apply (governor unsupported)</string>
+    <string name="thermal_throttle_alert_title">High CPU Temperature: Throttling Active</string>
+    <string name="thermal_throttle_alert_body">Temperature reached %1$.1f °C (limit %2$.1f °C). Maximum frequency is lowered step by step until it cools down.</string>
+
+    <!-- Sidebar Navigation & Thermal Screen -->
+    <string name="nav_thermal">Thermal</string>
+    <string name="nav_menu_open">Open menu</string>
+    <string name="nav_menu_close">Close menu</string>
+    <string name="sidebar_subtitle">Root CPU control</string>
+    <string name="badge_root_active">Root active</string>
+    <string name="thermal_screen_title">CPU Temperature</string>
+    <string name="thermal_screen_desc">This limit is global: maximum frequency of every profile is capped while the temperature is above it, then restored step by step once cooled.</string>
+    <string name="thermal_reset_default">Default</string>
+    <string name="thermal_info_title">How the thermal guard works</string>
+    <string name="thermal_info_stepdown">Above the limit: maximum frequency drops one step per sensor reading.</string>
+    <string name="thermal_info_hysteresis">4 °C hysteresis: frequency only climbs back once the temperature is 4 °C below the limit.</string>
+    <string name="thermal_info_floor">Safe floor: frequency is never pushed below 30 percent of the cluster hardware maximum.</string>
+    <string name="thermal_info_priority">Applies above Screen-Off, Per-App, and manual settings.</string>
+    <string name="thermal_info_polling">Sensors are read every 4 seconds with the screen on and 15 seconds with the screen off.</string>
+
+    <!-- Log Screen -->
+    <string name="nav_logs">Logs</string>
+    <string name="logs_screen_desc">Profile applies, triggers, and the shell commands CoolMax executed.</string>
+    <string name="btn_clear_logs">Clear Logs</string>
+    <string name="logs_clear_confirm">Delete the entire event history? This cannot be undone.</string>
+    <string name="logs_count_format">%1$d log entries</string>
+</resources>

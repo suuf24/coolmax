@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  CoolMax mark: a CPU die seen head on, with the accent core standing for the frequency the app
+  controls. Drawn straight from the app's own palette (ink #2A3442, accent #355AD4) so the icon and
+  the UI read as one product. Geometry sits inside the 66dp adaptive safe zone.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Package pins, three per side -->
+    <path
+        android:pathData="M45,28 L45,37 M54,28 L54,37 M63,28 L63,37 M45,71 L45,80 M54,71 L54,80 M63,71 L63,80 M28,45 L37,45 M28,54 L37,54 M28,63 L37,63 M71,45 L80,45 M71,54 L80,54 M71,63 L80,63"
+        android:strokeColor="#2A3442"
+        android:strokeLineCap="round"
+        android:strokeWidth="4.5" />
+
+    <!-- Chip body -->
+    <path
+        android:pathData="M45,37 L63,37 A8,8 0 0 1 71,45 L71,63 A8,8 0 0 1 63,71 L45,71 A8,8 0 0 1 37,63 L37,45 A8,8 0 0 1 45,37 Z"
+        android:strokeColor="#2A3442"
+        android:strokeWidth="4.5" />
+
+    <!-- Accent core -->
+    <path
+        android:fillColor="#355AD4"
+        android:pathData="M50,47 L58,47 A3.5,3.5 0 0 1 61.5,50.5 L61.5,57.5 A3.5,3.5 0 0 1 58,61 L50,61 A3.5,3.5 0 0 1 46.5,57.5 L46.5,50.5 A3.5,3.5 0 0 1 50,47 Z" />
+</vector>

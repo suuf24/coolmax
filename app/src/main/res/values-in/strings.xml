@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CoolMax</string>
+    <string name="nav_dashboard">Dasbor</string>
+    <string name="nav_cpu_control">Kontrol CPU</string>
+    <string name="nav_screen_off">Layar Mati</string>
+
+    <string name="badge_dry_run_active">MODE SIMULASI (DRY-RUN) AKTIF</string>
+    <string name="btn_reset_system_default">Reset Default Sistem</string>
+    <string name="btn_dismiss">Tutup</string>
+    <string name="app_loading">Memuat data CPU…</string>
+
+    <!-- Root Required Screen -->
+    <string name="root_required_title">Akses Root Diperlukan</string>
+    <string name="root_required_explanation">CoolMax membutuhkan akses root (Magisk, KernelSU, atau APatch via libsu) untuk membaca dan menulis node cpufreq di /sys/devices/system/cpu/. Pastikan izin superuser telah diberikan untuk aplikasi ini.</string>
+    <string name="btn_retry_root">Coba Lagi Deteksi Root</string>
+    <string name="btn_try_dry_run_mode">Masuk Mode Simulasi (Dry-Run)</string>
+
+    <!-- 15s Confirmation Dialog -->
+    <string name="confirm_keep_title">Konfirmasi Perubahan Frekuensi</string>
+    <string name="confirm_keep_body">Profil "%1$s" telah diterapkan dan diverifikasi. Tekan "Pertahankan" dalam %2$d detik atau pengaturan akan dikembalikan otomatis demi keamanan.</string>
+    <string name="btn_keep_changes">Pertahankan (%1$ds)</string>
+    <string name="btn_revert_now">Kembalikan Sekarang</string>
+
+    <!-- Dashboard -->
+    <string name="safe_mode_banner_title">MODE AMAN (SAFE MODE) AKTIF</string>
+    <string name="safe_mode_banner_default_reason">Terdeteksi kegagalan atau reboot saat menerapkan profil sebelumnya. Semua fitur auto-apply telah dinonaktifkan dan snapshot awal dipulihkan untuk mencegah bootloop.</string>
+    <string name="btn_acknowledge_safe_mode">Mengerti &amp; Matikan Peringatan Safe Mode</string>
+    <string name="dashboard_thermal_title">Suhu CPU / SoC</string>
+    <string name="dashboard_thermal_unavailable">Sensor /sys/class/thermal tidak tersedia</string>
+    <string name="cluster_cores_online_format">Core Online: %1$s (Total: %2$s)</string>
+    <string name="realtime_chart_title">Grafik Frekuensi &amp; Suhu Real-Time (Saat Aplikasi Terlihat)</string>
+    <string name="time_in_state_title">Statistik Time-in-State</string>
+    <string name="dashboard_empty_clusters_title">Belum ada cluster CPU terbaca</string>
+    <string name="dashboard_empty_clusters_desc">CoolMax belum menemukan node cpufreq yang bisa dibaca. Pastikan akses root aktif, lalu muat ulang aplikasi.</string>
+
+    <string name="device_info_title">Informasi Perangkat &amp; Kernel</string>
+    <string name="device_info_soc">SoC / Platform</string>
+    <string name="device_info_clusters">Cluster &amp; Core</string>
+    <string name="device_info_governors">Governor Tersedia</string>
+    <string name="device_info_kernel">Versi Kernel</string>
+    <string name="device_info_root">Status Root</string>
+    <string name="device_info_selinux">Status SELinux</string>
+    <string name="pref_dry_run_title">Mode Simulasi (Dry-Run)</string>
+    <string name="pref_dry_run_desc">Tampilkan perintah sysfs di log tanpa benar-benar menulis ke kernel</string>
+
+    <string name="event_history_title">Riwayat Event &amp; Log</string>
+    <string name="event_history_empty">Belum ada riwayat penerapan profil.</string>
+    <string name="btn_export_logs">Ekspor Log</string>
+
+    <!-- CPU Control -->
+    <string name="label_scaling_min_freq">Frekuensi Minimum (scaling_min_freq)</string>
+    <string name="label_scaling_max_freq">Frekuensi Maksimum (scaling_max_freq)</string>
+    <string name="label_scaling_governor">Governor Aktif (scaling_governor)</string>
+    <string name="warning_max_below_50_percent">Peringatan: Frekuensi maksimum di bawah 50 persen dari batas perangkat keras cluster dapat menurunkan responsivitas.</string>
+    <string name="btn_apply_manual_15s">Terapkan (Konfirmasi 15 Detik)</string>
+    <string name="btn_undo_last_apply">Undo Perubahan Terakhir</string>
+    <string name="label_save_as_profile_name">Nama Profil Baru</string>
+    <string name="btn_save_current_as_profile">Simpan sebagai Profil</string>
+
+    <!-- Screen-Off & Triggers -->
+    <string name="screen_off_toggle_title">Aktifkan Profil Saat Layar Mati</string>
+    <string name="screen_off_toggle_desc">Terapkan batas frekuensi hemat daya saat layar mati dan pulihkan otomatis saat layar menyala</string>
+    <string name="screen_off_preset_label">Preset Profil Layar Mati</string>
+    <string name="preset_battery_saver">Hemat Baterai</string>
+    <string name="preset_balanced">Seimbang</string>
+    <string name="preset_custom">Custom</string>
+    <string name="screen_off_delay_format">Delay sebelum diterapkan: %1$d detik</string>
+    <string name="screen_off_skip_charging">Jangan terapkan saat mengisi daya (Charging)</string>
+    <string name="screen_off_skip_media">Jangan terapkan saat media/musik diputar</string>
+    <string name="screen_off_network_2g_title">Mode Jaringan 2G Saat Layar Mati</string>
+    <string name="screen_off_network_2g_desc">Saat layar mati, mode jaringan diturunkan ke 2G (GSM only) dan kembali ke mode default saat layar menyala. Sinyal seluler terputus sesaat.</string>
+    <string name="screen_off_freeze_title">Bekukan Aplikasi Saat Layar Mati</string>
+    <string name="screen_off_freeze_desc">Aplikasi lain dihentikan sementara (freeze) agar tidak berjalan di latar belakang. Aplikasi dalam whitelist tetap berjalan normal.</string>
+    <string name="screen_off_freeze_whitelist_count">Whitelist: %1$d aplikasi</string>
+    <string name="screen_off_freeze_manage">Kelola Whitelist Aplikasi</string>
+    <string name="screen_off_freeze_dialog_title">Pilih Aplikasi Whitelist</string>
+    <string name="screen_off_freeze_dialog_desc">Aplikasi terpilih tidak akan dibekukan saat layar mati (misalnya pemutar musik, aplikasi pesan, atau VPN).</string>
+    <string name="screen_off_freeze_empty">Tidak ada aplikasi yang cocok.</string>
+    <string name="screen_off_cores_title">Status Core Saat Layar Mati: %1$s</string>
+
+    <string name="triggers_section_title">Trigger Otomatis &amp; Perlindungan Termal</string>
+    <string name="triggers_priority_order_desc">Prioritas: Safe Mode &gt; Suhu Tinggi &gt; Manual &gt; Per-Aplikasi &gt; Layar Mati &gt; Baterai Lemah &gt; Jadwal</string>
+    <string name="trigger_low_battery_label">Otomatis Hemat saat Baterai &lt;= %1$d%%</string>
+    <string name="trigger_schedule_label">Jadwal Malam (%1$02d:00 – %2$02d:00)</string>
+    <string name="trigger_per_app_label">Profil Per-Aplikasi (via UsageStats resmi)</string>
+    <string name="btn_grant_usage_stats">Buka Pengaturan Izin Akses Penggunaan</string>
+    <string name="btn_ignore_battery_optimizations">Kecualikan dari Optimasi Baterai (Doze)</string>
+    <string name="screen_on_restore_label">Saat Layar Nyala Kembali</string>
+    <string name="restore_mode_snapshot">Pulihkan Snapshot Sebelum Layar Mati</string>
+    <string name="restore_mode_screen_on_config">Selalu Pakai Konfigurasi Khusus Layar Nyala</string>
+
+    <!-- Profile Management -->
+    <string name="profiles_management_title">Manajemen Profil &amp; Ekspor/Impor JSON</string>
+    <string name="profiles_empty_desc">Belum ada profil tersimpan. Anda dapat menyimpan profil dari tab Kontrol CPU atau mengimpor JSON.</string>
+    <string name="btn_profile_apply">Terapkan</string>
+    <string name="btn_profile_duplicate">Duplikat</string>
+    <string name="btn_profile_export">Ekspor JSON</string>
+    <string name="btn_profile_delete">Hapus</string>
+    <string name="label_import_profile_json">Tempel JSON Profil untuk Diimpor</string>
+    <string name="btn_import_profile_json">Validasi &amp; Impor JSON</string>
+
+    <!-- Notifications, Tile & Widget -->
+    <string name="notif_channel_guard_name">Layanan Pelindung Layar Mati</string>
+    <string name="notif_channel_guard_desc">Notifikasi persisten untuk memantau status layar mati/menyala</string>
+    <string name="notif_channel_alert_name">Peringatan Suhu &amp; Keamanan CPU</string>
+    <string name="notif_channel_alert_desc">Notifikasi saat suhu CPU melampaui batas aman</string>
+    <string name="notif_status_monitoring">Memantau layar &amp; suhu CPU</string>
+    <string name="notif_status_screen_off_active">Profil Layar Mati aktif (%1$s)</string>
+    <string name="notif_status_skipped_charging">Profil layar mati dilewati (sedang mengisi daya)</string>
+    <string name="notif_status_skipped_media">Profil layar mati dilewati (media sedang diputar)</string>
+    <string name="notif_status_paused_1h">Dijeda selama 1 jam (Default sistem dipulihkan)</string>
+    <string name="notif_status_reset_done">Dikembalikan ke default sistem</string>
+    <string name="notif_status_apply_error">Sebagian nilai ditimpa oleh sistem/thermal HAL</string>
+    <string name="notif_action_pause_1h">Jeda 1 Jam</string>
+    <string name="notif_action_reset">Reset Default</string>
+
+    <string name="tile_screen_off_label">CoolMax Layar Mati</string>
+    <string name="widget_name">Widget Profil CoolMax</string>
+    <string name="widget_status_on">Layar Mati: AKTIF (%1$s)</string>
+    <string name="widget_status_off">Layar Mati: NONAKTIF</string>
+    <string name="widget_btn_toggle_label">On/Off</string>
+    <string name="widget_btn_preset_label">Ganti Preset</string>
+    <string name="dry_run_confirm_title">Mode Dry-Run Aktif</string>
+    <string name="dry_run_confirm_body">Dry-Run hanya menyimulasikan perintah: tidak ada nilai CPU yang benar-benar diubah. Matikan Dry-Run di Dashboard jika ingin menerapkan sungguhan.</string>
+    <string name="dry_run_confirm_continue">Simulasikan Saja</string>
+    <string name="dry_run_confirm_cancel">Batal</string>
+    <!-- Per-App Governor & Governor Dropdown -->
+    <string name="nav_per_app">Per-Aplikasi</string>
+    <string name="btn_cancel">Batal</string>
+    <string name="btn_save">Simpan</string>
+    <string name="governor_dropdown_label_short">Governor</string>
+    <string name="governor_active_format">Aktif di kernel: %1$s</string>
+    <string name="governor_none_available">Kernel tidak menyediakan governor</string>
+
+    <!-- Custom Thermal Limit -->
+    <string name="thermal_guard_title">Batas Suhu Kustom</string>
+    <string name="thermal_guard_desc">Turunkan frekuensi maksimum bertahap saat suhu melewati batas Anda, lalu pulihkan otomatis setelah dingin</string>
+    <string name="thermal_limit_label_format">Batas suhu: %1$.0f °C</string>
+    <string name="thermal_input_label">Nilai manual (°C)</string>
+    <string name="thermal_status_normal">Normal</string>
+    <string name="thermal_status_throttling">Throttling</string>
+    <string name="thermal_sensor_unavailable">Sensor suhu tidak tersedia</string>
+    <string name="thermal_high_risk_warning">Peringatan: batas ≥ 85 °C terlalu tinggi. Perangkat bisa throttling paksa atau kepanasan. Gunakan 70–80 °C untuk pemakaian harian.</string>
+    <string name="thermal_guard_note">Batas ini membatasi scaling_max_freq di atas semua profil lain (layar mati, per-aplikasi, manual). Histeresis 4 °C mencegah frekuensi naik-turun.</string>
+
+    <!-- Per-App Governor Screen -->
+    <string name="perapp_master_title">Governor Per-Aplikasi</string>
+    <string name="perapp_master_desc">Terapkan governor tertentu saat aplikasi pilihan berada di depan; governor global dipulihkan saat Anda keluar</string>
+    <string name="perapp_priority_note">Prioritas: Profil Layar Mati &gt; Governor Per-Aplikasi &gt; Governor Global. Batas suhu tetap membatasi frekuensi di atas semuanya.</string>
+    <string name="perapp_usage_permission_missing">Izin Akses Penggunaan belum diberikan, jadi aplikasi di depan tidak bisa dideteksi. Berikan izin agar aturan per-aplikasi berjalan.</string>
+    <string name="perapp_add_app">Tambah Aplikasi</string>
+    <string name="perapp_selected_title">Aplikasi Terpilih</string>
+    <string name="perapp_restore_all">Restore Semua</string>
+    <string name="perapp_empty">Belum ada aplikasi. Tambahkan aplikasi untuk mengatur governor-nya.</string>
+    <string name="perapp_edit">Ubah</string>
+    <string name="perapp_restore">Restore</string>
+    <string name="perapp_governor_unavailable_warning">Governor %1$s tidak tersedia di kernel ini sehingga aturan tidak akan diterapkan.</string>
+    <string name="perapp_picker_title">Pilih Aplikasi</string>
+    <string name="perapp_search_hint">Cari aplikasi…</string>
+    <string name="perapp_show_system">Tampilkan aplikasi sistem</string>
+    <string name="perapp_loading">Memuat daftar aplikasi…</string>
+    <string name="perapp_no_result">Tidak ada aplikasi yang cocok.</string>
+    <string name="perapp_governor_for_app">Governor untuk %1$s</string>
+    <string name="perapp_governor_label">Governor aplikasi</string>
+    <string name="perapp_restore_all_confirm_title">Restore Semua Aplikasi?</string>
+    <string name="perapp_restore_all_confirm_body">Semua aturan per-aplikasi akan dihapus dan governor global berlaku untuk semua aplikasi.</string>
+    <string name="notif_status_thermal_throttling">Throttling termal aktif (%1$.1f °C, batas %2$.1f °C)</string>
+    <string name="notif_status_thermal_normal">Suhu normal, batas throttle dilepas</string>
+    <string name="notif_status_per_app_governor">Per-aplikasi: governor %1$s untuk %2$s</string>
+    <string name="notif_status_per_app_failed">Aturan per-aplikasi gagal diterapkan (governor tidak didukung)</string>
+    <string name="thermal_throttle_alert_title">Suhu CPU Tinggi: Throttling Aktif</string>
+    <string name="thermal_throttle_alert_body">Suhu %1$.1f °C melewati batas %2$.1f °C. Frekuensi maksimum diturunkan bertahap hingga suhu turun.</string>
+
+    <!-- Sidebar Navigation & Thermal Screen -->
+    <string name="nav_thermal">Suhu &amp; Termal</string>
+    <string name="nav_menu_open">Buka menu</string>
+    <string name="nav_menu_close">Tutup menu</string>
+    <string name="sidebar_subtitle">Kontrol CPU berbasis root</string>
+    <string name="badge_root_active">Root aktif</string>
+    <string name="thermal_screen_title">Suhu CPU</string>
+    <string name="thermal_screen_desc">Batas ini berlaku global: frekuensi maksimum semua profil dibatasi saat suhu melewatinya, lalu dipulihkan bertahap setelah dingin.</string>
+    <string name="thermal_reset_default">Default</string>
+    <string name="thermal_info_title">Cara kerja pengaman suhu</string>
+    <string name="thermal_info_stepdown">Melewati batas: frekuensi maksimum diturunkan satu langkah tiap pembacaan sensor.</string>
+    <string name="thermal_info_hysteresis">Histeresis 4 °C: frekuensi baru dinaikkan setelah suhu turun 4 °C di bawah batas.</string>
+    <string name="thermal_info_floor">Batas bawah aman: frekuensi tidak pernah diturunkan di bawah 30 persen batas maksimum cluster.</string>
+    <string name="thermal_info_priority">Berlaku di atas profil Layar Mati, Per-Aplikasi, dan pengaturan manual.</string>
+    <string name="thermal_info_polling">Sensor dibaca tiap 4 detik saat layar nyala dan 15 detik saat layar mati.</string>
+
+    <!-- Log Screen -->
+    <string name="nav_logs">Log</string>
+    <string name="logs_screen_desc">Riwayat penerapan profil, trigger, dan perintah shell yang dijalankan CoolMax.</string>
+    <string name="btn_clear_logs">Hapus Log</string>
+    <string name="logs_clear_confirm">Hapus seluruh riwayat log? Tindakan ini tidak bisa dibatalkan.</string>
+    <string name="logs_count_format">%1$d entri log</string>
+</resources>
